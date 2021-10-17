@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta lang="en">
+    <meta charset="utf-8">
+    <title>Arcade Hitbox Creator</title>
+    <meta name="description" content="Create easily multiple hitbox for an image and export to JSON">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="canvas-wrapper" style="position: relative;">
+        <canvas id="myCanvas" width="200" height="200"></canvas>
+    </div>
+
+    <div>
+        <input type="file" id="imageInput" accept="image/*">
+
+        <label for="rectangle">Rectangle</label>
+        <input type="radio" id="rectangle" name="hitboxType" value="rectangle" checked>
+
+        <label for="circle">Circle</label>
+        <input type="radio" id="circle" name="hitboxType" value="circle">
+
+        <button id="cancelButton">Cancel</button>
+        <button id="generateButton">Generate JSON</button>
+    </div>
+
+
+</body>
+
+</html>
