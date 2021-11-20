@@ -4,6 +4,7 @@
 <head>
     <meta lang="en">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arcade Hitbox Creator</title>
     <meta name="description" content="Create easily multiple hitbox for an image and export to JSON">
     <link rel="icon" href="favicon.png" type="image/png">
@@ -16,19 +17,44 @@
         <canvas id="myCanvas" width="200" height="200"></canvas>
     </div>
 
-    <div>
-        <input type="file" id="imageInput" accept="image/*">
+    <hr />
+    <div class="container">
+        <label for="imageInput" class="label-file shadow">Choose a frame</label>
+        <input type="file" id="imageInput" accept="image/*" class="input-file">
 
-        <label for="rectangle">Rectangle</label>
-        <input type="radio" id="rectangle" name="hitboxType" value="rectangle" checked>
+        <div class="margin-top">
+            <label for="zoom" class="top-label">Zoom</label>
+            <input type="range" id="zoom" min="1" max="10" step="1"><span id="zoom-value">5</span>
+        </div>
 
-        <label for="circle">Circle</label>
-        <input type="radio" id="circle" name="hitboxType" value="circle">
 
-        <button id="cancelButton">Cancel</button>
-        <button id="generateButton">Generate JSON</button>
+        <div id="body-shape" class="margin-top border padding-block">
+            <label for="body-shape" class="top-label">Body Shape</label>
+            <label for="rectangle">Rectangle</label>
+            <input type="radio" id="rectangle" name="hitboxType" value="rectangle" checked>
+
+            <label for="circle">Circle</label>
+            <input type="radio" id="circle" name="hitboxType" value="circle">
+        </div>
+
+        <div class="margin-top">
+            <button id="cancelButton" class="shadow">Cancel</button>
+            <button id="generateButton" class="shadow">Generate JSON</button>
+        </div>
     </div>
+    <hr />
 
+    <div class="container">
+        <h1>Arcade Hitbox Creator</h1>
+        <ul>
+            <li>- Choose a frame, change the zoom if necessary (you can't change it after image opened).</li>
+            <li>- Choose your shape and click the left top start point of the desired hitbox.</li>
+            <li>- Move the mouse to size the hitbox, and click again to stop.</li>
+            <li>- Add more hitbox if needed, or use cancel to try again.</li>
+            <li>- Choose a new frame, and repeat the operation.</li>
+            <li>- Once finished, click Generate Json.</li>
+        </ul>
+    </div>
 
 </body>
 
